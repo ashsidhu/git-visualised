@@ -9,7 +9,8 @@ require.config({
 
 //requiring the scripts in the first argument and then passing the library namespaces into a callback
 //you should be able to console log all of the callback arguments
-var app = require(['jquery', 'underscore', 'd3'], function(jquery, _, d3){
-  console.log('init');
-  // return app = new App;
+require(['jquery', 'underscore', 'd3', './js/config.js'], function(jquery, _, d3, config){
+  console.log(config);
+  
+  window.config = config;
 });
