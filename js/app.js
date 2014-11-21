@@ -22,7 +22,7 @@ require(['jquery', 'underscore', 'd3', 'c3', './js/config.js'], function(jquery,
   $.ajax({
     ///url: 'https://api.github.com/orgs/hackreactor/members?per_page=100&page=2&access_token=' + config.token,
     //url: 'https://api.github.com/teams/878020/members?per_page=100&access_token=' + config.token,
-    url: 'https://api.github.com/teams/878020/repos?per_page=100&page=2&access_token=' + config.token,
+    url: 'https://api.github.com/teams/878020/repos?per_page=100&page=15&access_token=' + config.token,
 
     dataType: "json",
     success: function (returndata)
@@ -45,7 +45,7 @@ require(['jquery', 'underscore', 'd3', 'c3', './js/config.js'], function(jquery,
       bindto: '#chart',
       data: {
         columns: [
-          ['data1', 30, 200, 100, 400, 150, 250],
+          ['data1', 30, 200, 100, 5000, 150, 250],
           ['data2', 50, 20, 10, 40, 15, 25]
         ]
       }
